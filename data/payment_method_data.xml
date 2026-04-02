@@ -8,7 +8,7 @@
             <field name="code">instant_credit</field>
             <field name="sequence">20</field>
             <field name="active">True</field>
-            <field name="image" type="base64" file="payment_paycomet_jetframe/static/img/instant_credit.png"/>
+            <field name="image">iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==</field>
             <field name="support_tokenization">False</field>
             <field name="support_express_checkout">False</field>
             <!-- Refund support removed: no _send_refund_request implementation -->
