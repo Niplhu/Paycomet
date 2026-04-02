@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_provider_jetframe" model="payment.provider">
+        <field name="name">Paycomet JET</field>
+        <field name="code">jetframe</field>
+        <field name="module_id" ref="base.module_payment_paycomet_jetframe"/>
+        <field name="redirect_form_view_id" ref="redirect_form"/>
+        <field name="inline_form_view_id" ref="inline_form"/>
+        <!-- Start disabled so the admin must configure credentials before enabling -->
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <!-- Terminal ID and API Key intentionally left empty.
+             Configure them in Accounting > Configuration > Payment Providers. -->
+        <field name="payment_method_ids" eval="[
+            Command.set([
+                ref('payment.payment_method_card'),
+                ref('payment_paycomet_jetframe.payment_method_instant_credit'),
+            ])
+        ]"/>
+    </record>
+</odoo>
